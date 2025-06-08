@@ -21,4 +21,20 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+package-lock.json*
 replay_pid*
+/bin/
+/build/
+/build
+/build/*
+/coverage/
+/coverage
+/coverage/*
+/dist/
+/dist
+/dist/*
+/node_modules/
+/node_modules
+/node_modules/*
+
+/.classpath

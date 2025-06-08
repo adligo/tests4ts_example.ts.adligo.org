@@ -1,0 +1,56 @@
+{
+  "author": "Adligo Inc / Scott Morgan",
+  "bin": {
+    "example-cli-app": "./dist/src/exampleCliApp.mjs"
+  },
+  "bugs": {
+    "url": "https://github.com/adligo/tests4ts_example.ts.adligo.org/issues"
+  },
+  "description": "This is a simple Type Script Application that showcases the tests4ts.ts.adligo.org project. ",
+  "dependencies": {
+    "npm": "^11.4.0"
+  },
+  "bundleDependencies": [
+    "npm"
+  ],
+  "devDependencies": {
+    "@ts.adligo.org/i_io": "^0.0.5",
+    "@ts.adligo.org/i_obj": "^0.0.2",
+    "@ts.adligo.org/i_strings": "^0.0.2",
+    "@ts.adligo.org/i_tests4ts": "^0.0.8",
+    "@ts.adligo.org/junit-xml-tests4j": "^0.0.4",
+    "@ts.adligo.org/tests4ts": "^0.4.5",
+    "@types/node": "^22.15.21",
+    "c8": "^10.1.3",
+    "child_process": "^1.0.2",
+    "typescript": "^5.0.4"
+  },
+  "homepage": "https://github.com/adligo/i_tests4ts.ts.adligo.org#readme",
+  "keywords": [
+    "testing",
+    "tests4ts",
+    "i_tests4ts",
+    "ts.adligo.org"
+  ],
+  "license": "Apache-2.0",
+  "main": "src/exampleCliAppTrialSuite.mts",
+  "name": "@ts.adligo.org/example-cli-app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adligo/tests4ts_example.ts.adligo.org.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "buildAndTestUnix": "tsc && export TESTING=TRUE && node dist/test/exampleCliAppTrialSuite.mjs",
+    "buildAndTestWindows": "tsc && set TESTING=TRUE && node dist/test/exampleCliAppTrialSuite.mjs",
+    "buildAndTestWithCoverageUnix": "tsc && export TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
+    "buildAndTestWithCoverageWindows": "tsc && set TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
+    "run": "node ./dist/src/exampleCliApp.mjs",
+    "testsWindows": "set TESTING=TRUE && bun run test/exampleCliAppTrialSuite.mts",
+    "testsTemp": "bun ",
+    "testsUnix": "export TESTING=TRUE && bun run test/exampleCliAppTrialSuite.mts",
+    "tsc": "tsc"
+  },
+  "type": "commonjs",
+  "version": "0.0.1"
+}
