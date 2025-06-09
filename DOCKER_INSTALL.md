@@ -31,12 +31,19 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 Then install other stuff
 
 ```
-apt update 
-# apt install nodejs
-apt-get update
-nodejs -v
-apt install npm
-npm -v
+cd opt
+mkdir nvm
+export NVM_DIR=/opt/nvm  && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+groupadd all
+chgrp  all /opt/nvm
+// get the group id for all
+getent group all
+chgrp -R all /root/.nvm/versions/node
+usermod --append --groups all jenkins
+id
+getent group | grep jenkins
+npm update -g npm
+
 
 //install bun
 curl -fsSL https://bun.sh/install | bash

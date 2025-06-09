@@ -16,8 +16,8 @@
   "devDependencies": {
     "@ts.adligo.org/i_io": "^0.0.5",
     "@ts.adligo.org/i_obj": "^0.0.2",
-    "@ts.adligo.org/i_strings": "^0.0.2",
-    "@ts.adligo.org/i_tests4ts": "^0.0.8",
+    "@ts.adligo.org/i_strings": "^0.0.3",
+    "@ts.adligo.org/i_tests4ts": "^0.0.9",
     "@ts.adligo.org/junit-xml-tests4j": "^0.0.4",
     "@ts.adligo.org/tests4ts": "^0.4.5",
     "@types/node": "^22.15.30",
