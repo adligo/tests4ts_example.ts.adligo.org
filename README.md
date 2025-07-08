@@ -1,5 +1,7 @@
 # tests4ts_example.ts.adligo.org
-This is a simple example project that showcases tests4ts.ts.adligo.org in the usual way with out slink and fab.
+This project contains a number of sub folders that illustrate various ways to use Adligo's tests4ts.ts.adligo.org TypeScript Testing library.
+
+## Prerequesites for all Sub-Projects;
 
 First everything Adligo is done in GitBash so install that;
 
@@ -10,27 +12,6 @@ You will need to install bun to run the tests with out building the code first (
 [Install Bun]] (https://bun.sh/docs/installation)
 
 
-To build and test the code;
+## Basic Usage
 
-```
-npm run buildAndTest
-```
-
-## Install the exampleCliApp Locally;
-To install run the following command;
-
-```
-npm install -g @ts.adligo.org/example-cli-app
-```
-
-## Uninstall the exampleCliApp Locally;
-
-```
-npm uninstall -g @ts.adligo.org/example-cli-app
-```
-
-### Run the installed code;
-
-```
-$ exampleCliApp MTV
-```
+[](./basic/README.md)

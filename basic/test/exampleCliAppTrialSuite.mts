@@ -17,16 +17,20 @@
  * limitations under the License.
  */
 
+import { TrialType
+} from "@ts.adligo.org/i_tests4ts_types/dist/i_tests4ts_types.mjs";
 import { I_AssertionContext,I_AssertionContextConsumer, I_AssertionContextFactory,
   I_FileConverter, I_Runnable, I_Test,
-  I_TestResult, I_TestResultFactory, I_Trial, TrialType
-} from "@ts.adligo.org/i_tests4ts/src/i_tests4ts.mjs";
+  I_TestResult, I_TestResultFactory, I_Trial
+} from "@ts.adligo.org/i_tests4ts/dist/i_tests4ts.mjs";
 import { ApiTrial } from '@ts.adligo.org/tests4ts/dist/trials.mjs';
-import { Test, TestParams, TrialSuite, TrialSuiteParams } from '@ts.adligo.org/tests4ts/dist/tests4ts.mjs';
+import { TrialSuite, TrialSuiteParams } from '@ts.adligo.org/tests4ts/dist/tests4ts.mjs';
+import { Test, TestParams } from '@ts.adligo.org/tests4ts/dist/tests.mjs';
 import { I_ConsoleLog, Tv, TvChannel, TvChannelFan } from '../src/exampleCliApp.mjs';
 import { JUnitXmlGenerator } from '@ts.adligo.org/junit-xml-tests4j/dist/junitXmlTests4jGenerator.mjs'
 import {AssertionContext} from "@ts.adligo.org/tests4ts/dist/assertions.mjs";
-import { I_Equatable } from "@ts.adligo.org/i_obj/src/i_obj.mjs";
+import { I_Equatable } from "@ts.adligo.org/i_obj/dist/i_obj.mjs";
+import {I_String} from '@ts.adligo.org/i_strings/dist/i_strings.mjs';
 
 export class MockConsoleLog implements I_ConsoleLog {
   _messages: string[] = [];
@@ -49,8 +53,13 @@ export class MockConsoleLog implements I_ConsoleLog {
 }
 
 export class ExampleCliAppTrial extends ApiTrial {
-  public static readonly testExample = new Test(TestParams.of('org.adligo.ts.tests4ts_example.ExampleCliAppTrial.' +
-      'testExample'), (ac: I_AssertionContext) => {
+  public static readonly CLAZZ_NAME = "org.adligo.ts.tests4ts_example.ExampleCliAppTrial";
+  
+  constructor() {
+    super(ExampleCliAppTrial.CLAZZ_NAME);
+  }
+  
+  testExample(ac: I_AssertionContext) {
     let consoleMock = new MockConsoleLog();
     let tv: Tv = new Tv(consoleMock);
     tv.setChannel("MTV");
@@ -64,20 +73,17 @@ export class ExampleCliAppTrial extends ApiTrial {
 
     let acc: MtvAssertionContext = ac as MtvAssertionContext;
     acc.assertGirlsJustWantToHaveFunMightBePlayed(tv);
-  });
-
-  constructor() {
-    super('ExampleCliAppTrial', [ExampleCliAppTrial.testExample
-    ]);
   }
 }
 
 export class MtvAssertionContext extends AssertionContext implements I_AssertionContext {
+  error(expected: string, runnable: () => void): void { super.error(expected, runnable); }
   equals(expected: any, actual: any, message?: string): void { super.equals(expected, actual, message); }
   getCount(): number { return super.getCount(); }
   isFalse(check: boolean, message?: string): void { super.isFalse(check, message); }
   isTrue(check: boolean, message?: string): void { super.isTrue(check, message); }
   notEquals(expected: I_Equatable, actual: any, message?: string): void { super.notEquals(expected, actual, message); }
+  notNull(expected: I_String | string | any, message?: string): void { super.notNull(expected, message); }
   notSame(expected: string, actual: string, message?: string): void { super.notSame(expected, actual, message); }
   same(expected: string, actual: string, message?: string): void { super.same(expected, actual, message); }
   thrown(error: Error, runner: I_Runnable, message?: string): void { super.thrown(error, runner, message); }
