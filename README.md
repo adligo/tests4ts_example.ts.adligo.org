@@ -9,9 +9,9 @@ First everything Adligo is done in GitBash so install that;
 
 You will need to install bun to run the tests with out building the code first (aka run Typescript directly with out transpilation);
 
-[Install Bun]] (https://bun.sh/docs/installation)
+[Install Bun](https://bun.sh/docs/installation)
 
 
 ## Basic Usage
 
-[](./basic/README.md)
+[Basic Usage Readme](./basic/README.md)
