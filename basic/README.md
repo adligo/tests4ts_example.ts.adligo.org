@@ -12,6 +12,10 @@ To build and test the code;
 
 ```
 npm run buildAndTest
+i.e.
+npm run buildAndTestWindows
+or
+npm run buildAndTestUnix
 ```
 
 ## Install the exampleCliApp Locally;
