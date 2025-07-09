@@ -15,3 +15,7 @@ You will need to install bun to run the tests with out building the code first (
 ## Basic Usage
 
 [Basic Usage Readme](./basic/README.md)
+
+## Usage From Jest
+
+[Usage From Jest](./from-jest/README.md)
