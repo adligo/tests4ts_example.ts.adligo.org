@@ -87,7 +87,7 @@ node --inspect-brk node_modules/jest/bin/jest.js --runInBand --config test-from-
 [Then attach WebStorm to the Debugger Server](https://www.google.com/search?q=attach+webstorm+to+a+node+debugger+server&rlz=1C1ONGR_enUS1154US1154&oq=attach+webstorm+to+a+node+debugger+server&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRiPAtIBCTEyNDk0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8)
 
 ## Jest Walkthrough / Debugging through notes
-These are just notes about the Jest codebase, for starters the maintainers don't even have a high oppinion of it as it wasn't planned and just 'sort of happened this way';
+These are just notes about the Jest codebase, for starters the maintainers don't even have a high oppinion of it as it wasn't planned and just *'**sort of happened this way**'*;
 
 --
 [Jest Architecture Maintainer Docs](https://jestjs.io/docs/architecture)
