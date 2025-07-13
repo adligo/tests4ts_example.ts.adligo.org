@@ -25,11 +25,13 @@ const config: Config =  {
     hasteMapModulePath: `${process.cwd()}/etc/customHasteMap.mts`
   },
   */
+ /*
   roots: [
     `${rootDir}`,`${baseDir}`, `${baseTestDir}`
   ],
+  */
   testMatch:[
-      `${baseTestDir}/*test.mts`
+      `${baseTestDir}/*test.ts`
   ],
   /**
    * testPathIgnorePatterns seems to be broken or never worked,

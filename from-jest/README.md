@@ -133,7 +133,8 @@ so if you want to debug that stick a breakpoint around line 67
 also note this appears to be 
 brute force matching 
 long file name by long file name 
-a CS smell, use a Map instead and filter directories in a tree?
+a CS smell!, use a Map instead and filter directories in the tree!
+i.e. @see /tests4ts_example.ts.adligo.org/from-jest/etc/regCheck.mts
 const matcher = (input, returnObject = false) => {
   const { isMatch, match, output } = picomatch.test(input, regex, options, { glob, posix });
 ...

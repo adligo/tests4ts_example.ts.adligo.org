@@ -19,6 +19,9 @@
  */
 console.log("Run this from the parent folder or this folder;");
 console.log("You can also debug it with \n");
+console.log("node hasteMapIsolated.mjs ")
+console.log("node etc/hasteMapIsolated.mjs ")
+console.log("node --inspect-brk hasteMapIsolated.mjs --runInBand ")
 console.log("node --inspect-brk etc/hasteMapIsolated.mjs --runInBand ")
 
 import Haste from 'jest-haste-map';
@@ -65,7 +68,8 @@ const hasteMap= new Haste.default({
 });
 
 /**
- This blows up with messages like;
+ Hmm this blows up with messages like;
+ I think it is having a issue figuring out where to put the 
  node:fs:553
    return binding.open(
                   ^
