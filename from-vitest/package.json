@@ -1,0 +1,41 @@
+{
+  "name": "@ts.adligo.org/from-jest-example",
+  "version": "1.0.0",
+  "description": "Example showing how to use Tests4ts with Jest test runner",
+  "type": "module",
+  "main": "dist/exampleCliApp.mjs",
+  "bin": {
+    "fromJestExampleCliApp": "dist/exampleCliApp.mjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "buildAll": "tsc && tsc --build test-from-jest-tsconfig.json ",
+    "buildAndTestUnix": "tsc && export TESTING=TRUE && npm run test",
+    "buildAndTestFromJestWindows": "tsc && set TESTING=TRUE && npx jest --config=./test-from-jest.config.js",
+    "buildAndTestWithCoverageUnix": "tsc && export TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
+    "buildAndTestWithCoverageWindows": "tsc && set TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
+    "test": "npx vitest"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.27.1",
+    "@jest/globals": "^30.0.4",
+    "@rollup/rollup-win32-x64-msvc": "^4.45.0",
+    "@ts.adligo.org/i_io": "^0.0.5",
+    "@ts.adligo.org/i_obj": "^0.0.2",
+    "@ts.adligo.org/i_strings": "^0.0.3",
+    "@ts.adligo.org/i_tests4ts": "^0.3.0",
+    "@ts.adligo.org/i_tests4ts_types": "^0.3.0",
+    "@ts.adligo.org/junit-xml-tests4j": "^0.0.5",
+    "@ts.adligo.org/tests4ts": "^0.6.1",
+    "@ts.adligo.org/type-guards": "^0.0.2",
+    "@types/jest": "^29.4.0",
+    "@types/uuid": "^9.0.0",
+    "jest": "^29.4.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.4",
+    "vite": "^7.0.4",
+    "vitest": "^3.2.4"
+  },
+  "author": "Adligo Inc",
+  "license": "Apache-2.0"
+}
