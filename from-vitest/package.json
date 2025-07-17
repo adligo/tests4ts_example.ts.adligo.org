@@ -14,7 +14,9 @@
     "buildAndTestFromJestWindows": "tsc && set TESTING=TRUE && npx jest --config=./test-from-jest.config.js",
     "buildAndTestWithCoverageUnix": "tsc && export TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
     "buildAndTestWithCoverageWindows": "tsc && set TESTING=TRUE && c8 node dist/test/exampleCliAppTrialSuite.mjs",
-    "test": "npx vitest"
+    "coverage": "npx vitest --coverage",
+    "test": "npx vitest",
+    "test-migrate": "npx vitest --config ./vite-migrate.config.ts"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.1",
@@ -30,6 +32,7 @@
     "@ts.adligo.org/type-guards": "^0.0.2",
     "@types/jest": "^29.4.0",
     "@types/uuid": "^9.0.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "jest": "^29.4.1",
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.4",

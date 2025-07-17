@@ -14,7 +14,7 @@ export default defineConfig({
       "**/node_modules/**"
     ],
     include:[
-        `${baseTestDir}/*.test.ts`
+        `${baseTestDir}/*.test.mts`
     ],
     includeSource: [
       `${baseDir}/*.mts`

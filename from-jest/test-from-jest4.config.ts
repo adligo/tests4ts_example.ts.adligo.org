@@ -1,7 +1,4 @@
-import { createDefaultPreset } from "ts-jest";
 import type {Config} from 'jest';
-
-const tsJestTransformCfg = createDefaultPreset().transform;
 
 const rootDir = '<rootDir>';
 const baseDir = '<rootDir>/src';
@@ -10,9 +7,12 @@ const baseTestDir = '<rootDir>/test-from-jest';
 const config: Config =  {
   preset: 'ts-jest',
   testEnvironment: "node",
+  /*
   transform: {
-    ...tsJestTransformCfg,
+    //tsJestTransformCfg
+    "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
   },
+  */
   verbose: true,
   collectCoverage: true,
   collectCoverageFrom: [
@@ -40,7 +40,11 @@ const config: Config =  {
    * 21 ish files, but only want to debug why ONE is not matching
    */
   testPathIgnorePatterns: ["<rootDir>/coverage/","<rootDir>/dist/", "<rootDir>/etc/", 
-    "<rootDir>/migrate-from-jest/", "<rootDir>/*.md", "<rootDir>/*.json", "<rootDir>/*.ts"],
+    "<rootDir>/migrate-from-jest/", "<rootDir>/*.md", "<rootDir>/*.json", "<rootDir>/*.ts"]
+    /*
+    ,
+  transformIgnorePatterns: ['node_modules']
+  */
 };
 
 export default config;
